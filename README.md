@@ -79,8 +79,8 @@ A `head(,10)` sample of the `grouped` data table follows:
 | 10 | 2 | laying | fbodybodyaccjerkmagmean | -0.985 |
 
 These data tables have been gzip compressed (and uploaded to this repository) via:
-`library(crunch)`
 
-`write.csv.gz(output, "output.gz", row.names = FALSE)`
-
-`write.csv.gz(grouped, "grouped.gz", row.names = FALSE)`
+```
+library(crunch)
+write.csv.gz(output, "output.gz", row.names = FALSE)
+write.csv.gz(grouped, "grouped.gz", row.names = FALSE)```
