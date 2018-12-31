@@ -1,6 +1,6 @@
-#Human Activity Recognition Assignment
+# Human Activity Recognition Assignment
 
-##Experimental data dimensions, metrics, and source files
+## Experimental data dimensions, metrics, and source files
 
 Experimental, raw data structure is persisted via, essentially, the five dimensions:
 
