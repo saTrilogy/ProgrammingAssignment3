@@ -84,3 +84,5 @@ These data tables have been gzip compressed (and uploaded to this repository) vi
 library(crunch)
 write.csv.gz(output, "output.gz", row.names = FALSE)
 write.csv.gz(grouped, "grouped.gz", row.names = FALSE)```
+
+Note that the full output gzipped dataset is over 5 Mb in size, so the uploaded file is just a sample of the first 5,000 rows of the output data to enable quick review.
