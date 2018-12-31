@@ -46,6 +46,42 @@ The essential outputs of the ELT process are therefore the variables `output` an
 
 In the final part of the script is code to generate codebooks for each of our output variables. The `datamaid` package is used and its default output is that of a PDF file. Manual porst-processing is required to render Markdown-specific output from the generated `Rmd` files and we have thus also created the single markdown file **CodeBook.md** which contains the collated metadata descriptions for the `output` and `grouped` data tables.
 
+## Output Data
+
+A `head(,10)` sample of the `output` data table follows:
+
+||group|subject|activity|variable|dimension|value|
+|-+|-----|------+|--------|--------|---------|-----|
+|1|test|2|standing|tbodyaccmean|x|0.2571778|
+|2|test|2|standing|tbodyaccmean|x|0.2860267|
+|3|test|2|standing|tbodyaccmean|x|0.2754848|
+|4|test|2|standing|tbodyaccmean|x|0.2702982|
+|5|test|2|standing|tbodyaccmean|x|0.2748330|
+|6|test|2|standing|tbodyaccmean|x|0.2792199|
+|7|test|2|standing|tbodyaccmean|x|0.2797459|
+|8|test|2|standing|tbodyaccmean|x|0.2746005|
+|9|test|2|standing|tbodyaccmean|x|0.2725287|
+|10|test|2|standing|tbodyaccmean|x|0.2757457|
+
+A `head(,10)` sample of the `grouped` data table follows:
+
+||subject|activity|variable|value|
+|-+|------+|--------|--------|-----|
+|1|2|laying|fbodyaccjerkmean|-0.985|
+|2|2|laying|fbodyaccjerkmeanfreq|0.157|
+|3|2|laying|fbodyaccjerkstd|-0.987|
+|4|2|laying|fbodyaccmagmean|-0.975|
+|5|2|laying|fbodyaccmagmeanfreq|0.266|
+|6|2|laying|fbodyaccmagstd|-0.975|
+|7|2|laying|fbodyaccmean|-0.980|
+|8|2|laying|fbodyaccmeanfreq|0.171|
+|9|2|laying|fbodyaccstd|-0.980|
+|10|2|laying|fbodybodyaccjerkmagmean|-0.985|
+
+These data tables have been compressed (gzip) and uploaded to this repository via:
+`library(crunch)
+write.csv.gz(output, "output.gz", row.names = FALSE)
+write.csv.gz(grouped, "grouped.gz", row.names = FALSE)`
 
 
 
